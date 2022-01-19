@@ -29,4 +29,5 @@ export interface iParamsPerNetwork<T> {
   [eEthereumNetwork.kovan]: T;
   [eEthereumNetwork.ropsten]: T;
   [eEthereumNetwork.main]: T;
+  [eEthereumNetwork.bsctest]: T;
 }

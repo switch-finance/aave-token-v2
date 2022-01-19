@@ -1,7 +1,7 @@
 import {eEthereumNetwork} from './helpers/types-common';
 // @ts-ignore
 import {accounts} from './test-wallets.js';
-import {BUIDLEREVM_CHAINID, COVERAGE_CHAINID} from './helpers/constants';
+import {BUIDLEREVM_CHAINID, COVERAGE_CHAINID, BSC_TEST_CHAINID} from './helpers/constants';
 import {HardhatUserConfig} from 'hardhat/config';
 
 import 'hardhat-typechain';
@@ -121,6 +121,10 @@ const config: HardhatUserConfig = {
     coverage: {
       url: 'http://localhost:8555',
       chainId: COVERAGE_CHAINID,
+    },
+    bsctest: {
+      url: `https://data-seed-prebsc-1-s1.binance.org:8545/`,
+      chainId: BSC_TEST_CHAINID,
     },
   },
 };

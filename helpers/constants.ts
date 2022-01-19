@@ -4,6 +4,7 @@ import {eEthereumNetwork} from './types-common';
 
 export const BUIDLEREVM_CHAINID = 31337;
 export const COVERAGE_CHAINID = 1337;
+export const BSC_TEST_CHAINID = 97;
 
 export const ZERO_ADDRESS: tEthereumAddress = '0x0000000000000000000000000000000000000000';
 export const ONE_ADDRESS = '0x0000000000000000000000000000000000000001';
@@ -26,6 +27,7 @@ export const getAaveTokenDomainSeparatorPerNetwork = (
       [eEthereumNetwork.kovan]: '',
       [eEthereumNetwork.ropsten]: '',
       [eEthereumNetwork.main]: '',
+      [eEthereumNetwork.bsctest]: ''
     },
     network
   );
@@ -39,6 +41,7 @@ export const getAaveAdminPerNetwork = (network: eEthereumNetwork): tEthereumAddr
       [eEthereumNetwork.kovan]: '0x8134929c3dcb1b8b82f27f53424b959fb82182f2',
       [eEthereumNetwork.ropsten]: '0xEd93e49A2d75beA505fD4D1A0Dff745f69F2E997',
       [eEthereumNetwork.main]: '0x8a2Efd9A790199F4c94c6effE210fce0B4724f52',
+      [eEthereumNetwork.bsctest]: '0xe60F698D4D124D1866EE308d68384f856c5A3cf0',
     },
     network
   );
@@ -51,6 +54,7 @@ export const getLendTokenPerNetwork = (network: eEthereumNetwork): tEthereumAddr
       [eEthereumNetwork.kovan]: '0x690eaca024935aaff9b14b9ff9e9c8757a281f3c',
       [eEthereumNetwork.ropsten]: '0xb47f338ec1e3857bb188e63569aebab036ee67c6',
       [eEthereumNetwork.main]: '0x80fB784B7eD66730e8b1DBd9820aFD29931aab03',
+      [eEthereumNetwork.bsctest]: ZERO_ADDRESS,
     },
     network
   );
