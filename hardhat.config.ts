@@ -124,7 +124,16 @@ const config: HardhatUserConfig = {
     },
     bsctest: {
       url: `https://data-seed-prebsc-1-s1.binance.org:8545/`,
+      hardfork: HARDFORK,
+      blockGasLimit: DEFAULT_BLOCK_GAS_LIMIT,
+      gasMultiplier: DEFAULT_GAS_PRICE,
       chainId: BSC_TEST_CHAINID,
+      accounts: {
+        mnemonic: MNEMONIC,
+        path: MNEMONIC_PATH,
+        initialIndex: 0,
+        count: 20,
+      },
     },
   },
 };

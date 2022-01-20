@@ -44,7 +44,7 @@ task(`initialize-${LendToAaveMigrator}`, `Initialize the ${LendToAaveMigrator} p
         `\tWARNING: Not initializing the ${LendToAaveMigrator} implementation, only set AAVE_ADMIN to Transparent Proxy contract.`
       );
       await waitForTx(
-        await lendToAaveMigratorProxy.initialize(lendToAaveMigratorImpl.address, aaveAdmin, '0x')
+        await lendToAaveMigratorProxy['initialize(address,address,bytes)'](lendToAaveMigratorImpl.address, aaveAdmin, '0x')
       );
       console.log(
         `\tFinished ${LendToAaveMigrator} Proxy initialization, but not ${LendToAaveMigrator} implementation.`
@@ -55,7 +55,7 @@ task(`initialize-${LendToAaveMigrator}`, `Initialize the ${LendToAaveMigrator} p
     console.log('\tInitializing LendToAaveMigrator Proxy and Implementation ');
 
     await waitForTx(
-      await lendToAaveMigratorProxy.initialize(
+      await lendToAaveMigratorProxy['initialize(address,address,bytes)'](
         lendToAaveMigratorImpl.address,
         aaveAdmin,
         lendToAaveMigratorInitializeEncoded

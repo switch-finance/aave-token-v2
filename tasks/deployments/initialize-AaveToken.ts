@@ -43,7 +43,7 @@ task(`initialize-${AaveToken}`, `Initialize the ${AaveToken} proxy contract`)
       console.log(
         `\tWARNING: Not initializing the ${AaveToken} implementation, only set AAVE_ADMIN to Transparent Proxy contract.`
       );
-      await waitForTx(await aaveTokenProxy.initialize(aaveTokenImpl.address, aaveAdmin, '0x'));
+      await waitForTx(await aaveTokenProxy['initialize(address,address,bytes)'](aaveTokenImpl.address, aaveAdmin, '0x'));
       console.log(
         `\tFinished ${AaveToken} Proxy initialization, but not ${AaveToken} implementation.`
       );
@@ -59,7 +59,7 @@ task(`initialize-${AaveToken}`, `Initialize the ${AaveToken} proxy contract`)
     ]);
 
     await waitForTx(
-      await aaveTokenProxy.initialize(aaveTokenImpl.address, aaveAdmin, aaveTokenEncodedInitialize)
+      await aaveTokenProxy['initialize(address,address,bytes)'](aaveTokenImpl.address, aaveAdmin, aaveTokenEncodedInitialize)
     );
 
     console.log('\tFinished Aave Token and Transparent Proxy initialization');

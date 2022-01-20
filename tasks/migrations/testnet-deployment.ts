@@ -38,12 +38,12 @@ task('testnet-deployment', 'Deployment in mainnet network')
 
     await DRE.run(`initialize-${eContractid.AaveToken}`, {
       admin: aaveAdmin,
-      onlyProxy: true,
+      onlyProxy: false,
     });
 
     await DRE.run(`initialize-${eContractid.LendToAaveMigrator}`, {
       admin: aaveAdmin,
-      onlyProxy: true,
+      onlyProxy: false,
     });
 
     console.log('\n✔️  Finished the deployment of the Aave Token Testnet Enviroment. ✔️');
