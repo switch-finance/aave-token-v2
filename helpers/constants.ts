@@ -26,6 +26,7 @@ export const getAaveTokenDomainSeparatorPerNetwork = (
         '0xd76d40d21133f42fdacea0d02807309902f26a87ff5b55bb55ac77f881143cc4',
       [eEthereumNetwork.kovan]: '',
       [eEthereumNetwork.ropsten]: '',
+      [eEthereumNetwork.rinkeby]: '',
       [eEthereumNetwork.main]: '',
       [eEthereumNetwork.bsctest]: ''
     },
@@ -40,6 +41,7 @@ export const getAaveAdminPerNetwork = (network: eEthereumNetwork): tEthereumAddr
       [eEthereumNetwork.hardhat]: ZERO_ADDRESS,
       [eEthereumNetwork.kovan]: '0x8134929c3dcb1b8b82f27f53424b959fb82182f2',
       [eEthereumNetwork.ropsten]: '0xEd93e49A2d75beA505fD4D1A0Dff745f69F2E997',
+      [eEthereumNetwork.rinkeby]: '0xe60F698D4D124D1866EE308d68384f856c5A3cf0',
       [eEthereumNetwork.main]: '0x8a2Efd9A790199F4c94c6effE210fce0B4724f52',
       [eEthereumNetwork.bsctest]: '0xe60F698D4D124D1866EE308d68384f856c5A3cf0',
     },
@@ -53,6 +55,7 @@ export const getLendTokenPerNetwork = (network: eEthereumNetwork): tEthereumAddr
       [eEthereumNetwork.hardhat]: ZERO_ADDRESS,
       [eEthereumNetwork.kovan]: '0x690eaca024935aaff9b14b9ff9e9c8757a281f3c',
       [eEthereumNetwork.ropsten]: '0xb47f338ec1e3857bb188e63569aebab036ee67c6',
+      [eEthereumNetwork.rinkeby]: ZERO_ADDRESS,
       [eEthereumNetwork.main]: '0x80fB784B7eD66730e8b1DBd9820aFD29931aab03',
       [eEthereumNetwork.bsctest]: ZERO_ADDRESS,
     },

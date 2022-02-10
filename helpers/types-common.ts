@@ -3,6 +3,7 @@ export enum eEthereumNetwork {
   hardhat = 'hardhat',
   kovan = 'kovan',
   ropsten = 'ropsten',
+  rinkeby = 'rinkeby',
   main = 'main',
   bsctest = 'bsctest'
 }
